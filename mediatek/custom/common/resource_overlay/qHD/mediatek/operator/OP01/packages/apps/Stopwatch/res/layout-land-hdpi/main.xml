@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/LinearLayout" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:orientation = "horizontal">
+        <LinearLayout android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight = "7">    
+            <LinearLayout android:id="@+id/TimerArea" 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_stopwatch_timer"
+            android:layout_weight = "3">
+                <LinearLayout 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="56dp"
+                    android:paddingTop="78dp">
+                    <ImageView android:src="@drawable/ic_stopwatch_0" android:scaleType="fitXY" android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView1"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_0" android:scaleType="fitXY" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView2"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_colon" android:scaleType="fitXY" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView3"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_0" android:scaleType="fitXY" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView4"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_0" android:scaleType="fitXY" android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView5"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_dot" android:scaleType="fitXY" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView6"></ImageView>
+                    <ImageView android:src="@drawable/ic_stopwatch_0" android:scaleType="fitXY" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/timeImageView7"></ImageView>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 
+            <LinearLayout android:id="@+id/ButtonArea" 
+            android:layout_width="fill_parent"
+            android:orientation = "horizontal" 
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarStyle"
+            android:layout_weight = "0">
+                <Button android:text="@string/btn_start" android:id="@+id/startButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="wrap_content" android:onClick="startClick" android:layout_weight = "1"></Button>
+                <Button android:text="@string/btn_stop" android:id="@+id/stopButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="wrap_content" android:visibility="gone" android:onClick="stopClick" android:layout_weight = "1"></Button>
+                <Button android:text="@string/btn_reset" android:id="@+id/resetButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="wrap_content" android:clickable="false" android:onClick="resetClick" android:layout_weight = "1"></Button>    
+                <Button android:text="@string/btn_count" android:id="@+id/countButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                android:layout_height="wrap_content" android:visibility="gone" android:onClick="countClick" android:layout_weight = "1"></Button>                
+            </LinearLayout>
+             -->
+            <LinearLayout android:id="@+id/SegementButtonArea" 
+            android:layout_width="fill_parent"
+            android:orientation = "vertical" 
+            android:layout_height="wrap_content"
+            android:layout_weight = "0">
+                <LinearLayout android:id="@+id/SegementArea" 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                    <ImageView android:src="@drawable/divider_horizontal_dark"
+                     android:scaleType="fitXY" android:layout_width="fill_parent" 
+                    android:layout_height="1dp" ></ImageView>                    
+                </LinearLayout>
+                <LinearLayout android:id="@+id/ButtonArea" 
+                android:layout_width="fill_parent"
+                android:orientation = "horizontal" 
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonBarStyle">
+                    <Button android:text="@string/btn_start" android:id="@+id/startButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="wrap_content" android:onClick="startClick" android:layout_weight = "1"></Button>
+                    <Button android:text="@string/btn_stop" android:id="@+id/stopButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="wrap_content" android:visibility="gone" android:onClick="stopClick" android:layout_weight = "1"></Button>
+                    <Button android:text="@string/btn_reset" android:id="@+id/resetButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="wrap_content" android:onClick="resetClick" android:layout_weight = "1"></Button>    
+                    <Button android:text="@string/btn_count" android:id="@+id/countButton" android:layout_width="fill_parent" style="?android:attr/buttonBarButtonStyle"
+                    android:layout_height="wrap_content" android:visibility="gone" android:onClick="countClick" android:layout_weight = "1"></Button>                
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_stopwatch_count"
+        android:layout_weight = "9">
+            <ListView android:id="@+id/countListView" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/divider_horizontal_bright"
+            android:fadingEdge="none">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
